@@ -1,0 +1,46 @@
+C:\Users\zasqw\AppData\Local\Temporary Projects\파일처리\bin\Debug\파일처리.exe
+C:\Users\zasqw\AppData\Local\Temporary Projects\파일처리\bin\Debug\파일처리.pdb
+C:\Users\zasqw\AppData\Local\Temporary Projects\파일처리\obj\x86\Debug\파일처리.Form1.resources
+C:\Users\zasqw\AppData\Local\Temporary Projects\파일처리\obj\x86\Debug\파일처리.Properties.Resources.resources
+C:\Users\zasqw\AppData\Local\Temporary Projects\파일처리\obj\x86\Debug\파일처리.csproj.GenerateResource.Cache
+C:\Users\zasqw\AppData\Local\Temporary Projects\파일처리\obj\x86\Debug\파일처리.exe
+C:\Users\zasqw\AppData\Local\Temporary Projects\파일처리\obj\x86\Debug\파일처리.pdb
+E:\파일처리\파일처리\obj\x86\Debug\파일처리.exe
+E:\파일처리\파일처리\obj\x86\Debug\파일처리.pdb
+F:\파일처리\파일처리\obj\x86\Debug\파일처리.exe
+F:\파일처리\파일처리\obj\x86\Debug\파일처리.pdb
+F:\파일처리\파일처리\obj\x86\Debug\파일처리.Form1.resources
+F:\파일처리\파일처리\obj\x86\Debug\파일처리.Properties.Resources.resources
+F:\파일처리\파일처리\obj\x86\Debug\파일처리.csproj.GenerateResource.Cache
+F:\파일처리\파일처리\bin\Debug\파일처리.exe
+F:\파일처리\파일처리\bin\Debug\파일처리.pdb
+E:\파일처리\파일처리\bin\Debug\파일처리.exe
+E:\파일처리\파일처리\bin\Debug\파일처리.pdb
+E:\파일처리\파일처리\obj\x86\Debug\파일처리.Form1.resources
+E:\파일처리\파일처리\obj\x86\Debug\파일처리.Properties.Resources.resources
+E:\파일처리\파일처리\obj\x86\Debug\파일처리.csproj.GenerateResource.Cache
+E:\파일처리\파일처리\obj\x86\Debug\파일처리.csprojResolveAssemblyReference.cache
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.exe
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.pdb
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\bin\Debug\파일처리.exe
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\bin\Debug\파일처리.pdb
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.csprojResolveAssemblyReference.cache
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.Form1.resources
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.Properties.Resources.resources
+E:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.csproj.GenerateResource.Cache
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.exe
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.pdb
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\bin\Debug\파일처리.exe
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\bin\Debug\파일처리.pdb
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.csprojResolveAssemblyReference.cache
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.Form1.resources
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.Properties.Resources.resources
+F:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.csproj.GenerateResource.Cache
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.exe
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.pdb
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\bin\Debug\파일처리.exe
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\bin\Debug\파일처리.pdb
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.csprojResolveAssemblyReference.cache
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.Form1.resources
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.Properties.Resources.resources
+D:\2학년\4.파일처리론\기말과제\파일처리\파일처리\obj\x86\Debug\파일처리.csproj.GenerateResource.Cache

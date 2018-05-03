@@ -1,0 +1,28 @@
+﻿  main.c
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\connted_list_cal.h(127): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 'strcpy' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\connted_list_cal.h(144): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\connted_list_cal.h(156): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\connted_list_cal.h(158): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\connted_list_cal.h(160): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\connted_list_cal.h(162): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\connted_list_cal.h(164): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\main.c(14): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 'strcpy' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\main.c(20): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 'strcpy' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\main.c(42): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\main.c(43): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\main.c(51): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+f:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\연결리스트\main.c(52): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+LINK : fatal error LNK1207: 'F:\2학년\3.데이터 구조\조별과제\조별과제\연결 리스트(완)\연결리스트\Debug\연결리스트.pdb'에 호환되지 않는 PDB 형식이 있습니다. 삭제한 다음 다시 빌드하십시오.

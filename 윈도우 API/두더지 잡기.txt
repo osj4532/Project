@@ -1,0 +1,134 @@
+//클릭하면 랜덤한 좌표에 +가 생기게 만들기(랜덤함수 찾기)
+#include <windows.h>
+#include <time.h>
+
+LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
+	WPARAM wParam, LPARAM lParam);
+
+
+LPCTSTR lpszClass = TEXT("Menu");
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+	LPSTR lpszCmdLine, int nCmdShow)
+{
+	HWND	hwnd;
+	MSG		msg;
+	WNDCLASS WndClass;
+	WndClass.style = CS_HREDRAW, CS_VREDRAW;
+	WndClass.lpfnWndProc = WndProc;
+	WndClass.cbClsExtra = 0;
+	WndClass.cbWndExtra = 0;
+	WndClass.hInstance = hInstance;
+	WndClass.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+	WndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
+	WndClass.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+	WndClass.lpszMenuName = NULL;
+	WndClass.lpszClassName = lpszClass;
+	RegisterClass(&WndClass);
+
+	hwnd = CreateWindow(lpszClass,
+		lpszClass,
+		WS_OVERLAPPEDWINDOW,
+		CW_USEDEFAULT,
+		CW_USEDEFAULT,
+		CW_USEDEFAULT,
+		CW_USEDEFAULT,
+		NULL,
+		NULL,
+		hInstance,
+		NULL
+	);
+	ShowWindow(hwnd, nCmdShow);
+	UpdateWindow(hwnd);
+
+	while (GetMessage(&msg, NULL, 0, 0))
+	{
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+	}
+	return (int)msg.wParam;
+}
+
+LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,   //  ,메시지의 종류(마우스, 키보드), 
+	WPARAM wParam, LPARAM lParam)              //  메시지의 정보(키보드의 무슨 키가 눌렸는가), 마우스가 움직였을때 좌표
+{												// LParam = unsigned int (32비트)  0~15 x좌표 16~31y좌표    LOWORD(lParam)x좌표 HIWORD(lParam)y좌표
+	HDC hdc;
+	PAINTSTRUCT ps;
+	static COLORREF fColor;
+	static char temp[10], tep[15], score1[10], timer[13];
+	static int xl, numy;
+	static int x, y;
+	static int score;
+
+	switch (iMsg)
+	{
+	case WM_CREATE:           //프로그램이 시작되면 무조건 한번 실행된다. (초기화가 필요한 것들은 다 여기에 넣는다.)
+		srand((unsigned)time(NULL));
+		xl = numy = 0;
+		x = y = 0;
+		score = 0;
+		SetTimer(hwnd, 1, 1000, NULL);
+		break;
+
+	case WM_TIMER:
+		xl = rand() % 1000;
+		numy = rand() % 550;
+		InvalidateRect(hwnd, NULL, TRUE);
+		break;
+
+	case WM_LBUTTONDOWN:
+		x = LOWORD(lParam);
+		y = HIWORD(lParam);
+		if (abs(xl - x) < 31 && abs(numy - y) < 31)
+		{
+			score++;
+			MessageBeep(0xFFFFFFFF); //스피커에서 음을 낸다.
+			InvalidateRect(hwnd, NULL, TRUE);
+		}
+		break;
+
+	case WM_LBUTTONUP:
+		break;
+
+	case WM_RBUTTONDOWN:
+		break;
+
+	case WM_RBUTTONUP:
+		break;
+
+	case WM_CHAR:                    // 키보드
+		InvalidateRect(hwnd, NULL, TRUE);// 메시지가 생긴다.(WM_PAINT)
+		break;
+
+	case WM_PAINT:                   //화면에 보이는 부분
+		hdc = BeginPaint(hwnd, &ps);
+
+		Rectangle(hdc, xl - 30, numy - 30, xl + 30, numy + 30);
+
+		SetTextColor(hdc, fColor);
+
+		wsprintf(temp, "좌표 : %3d %3d", xl, numy);
+		TextOut(hdc, 10, 10, temp, 14);
+
+		wsprintf(tep, "점수 : %2d 점", score);
+		TextOut(hdc, 10, 30, tep, strlen(tep));
+
+		if (score % 10 == 0 && score != 0)
+		{
+			wsprintf(score1, "%3d점 달성!!", score);
+			TextOut(hdc, 650, 30, score1, strlen(score1));
+		}
+		
+		if (abs(xl - x) < 31 && abs(numy - y) < 31)
+		{
+			TextOut(hdc, xl + 30, numy - 30, "으아악!", 7);
+		}
+		EndPaint(hwnd, &ps);
+		break;
+
+	case WM_DESTROY:                  //프로그램이 끝날때 무조건 한번 실행된다. (자원의 반환을 한다.)
+		PostQuitMessage(0);
+		break;
+	}
+	return DefWindowProc(hwnd, iMsg, wParam, lParam);
+}

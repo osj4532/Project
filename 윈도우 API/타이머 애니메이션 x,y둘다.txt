@@ -1,0 +1,138 @@
+//클릭하면 랜덤한 좌표에 +가 생기게 만들기(랜덤함수 찾기)
+#include <windows.h>
+#include <time.h>
+
+LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
+	WPARAM wParam, LPARAM lParam);
+
+
+LPCTSTR lpszClass = TEXT("Menu");
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+	LPSTR lpszCmdLine, int nCmdShow)
+{
+	HWND	hwnd;
+	MSG		msg;
+	WNDCLASS WndClass;
+	WndClass.style = CS_HREDRAW, CS_VREDRAW;
+	WndClass.lpfnWndProc = WndProc;
+	WndClass.cbClsExtra = 0;
+	WndClass.cbWndExtra = 0;
+	WndClass.hInstance = hInstance;
+	WndClass.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+	WndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
+	WndClass.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+	WndClass.lpszMenuName = NULL;
+	WndClass.lpszClassName = lpszClass;
+	RegisterClass(&WndClass);
+
+	hwnd = CreateWindow(lpszClass,
+		lpszClass,
+		WS_OVERLAPPEDWINDOW,
+		CW_USEDEFAULT,
+		CW_USEDEFAULT,
+		525,
+		550,
+		NULL,
+		NULL,
+		hInstance,
+		NULL
+	);
+	ShowWindow(hwnd, nCmdShow);
+	UpdateWindow(hwnd);
+
+	while (GetMessage(&msg, NULL, 0, 0))
+	{
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+	}
+	return (int)msg.wParam;
+}
+
+LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,   //  ,메시지의 종류(마우스, 키보드), 
+	WPARAM wParam, LPARAM lParam)              //  메시지의 정보(키보드의 무슨 키가 눌렸는가), 마우스가 움직였을때 좌표
+{												// LParam = unsigned int (32비트)  0~15 x좌표 16~31y좌표    LOWORD(lParam)x좌표 HIWORD(lParam)y좌표
+	HDC hdc;
+	PAINTSTRUCT ps;
+	static COLORREF fColor;
+	static int cnt;
+	static char ch[256];  //static 함수가 끝나도 이전값을 그대로 가지고 있다.
+	static char temp[10];
+	static int x, y, w, z;
+	static int numx, numy;
+
+
+	switch (iMsg)
+	{
+	case WM_CREATE:           //프로그램이 시작되면 무조건 한번 실행된다. (초기화가 필요한 것들은 다 여기에 넣는다.)
+		fColor = RGB(0, 0, 0);   //R, G, B   255으로 한바이트로 표현
+		x = y = w = z = 0;
+		cnt = 0;
+		ch[cnt] = 0;
+		SetTimer(hwnd, 1, 100, NULL);   // 윈도우 이름, 시계번호 , 몇초마다 울릴건지, ???
+		break;
+	case WM_TIMER:
+
+		if (y == 0)
+		{ 
+			x = x + 5;
+		}
+		if (y == 1)
+		{
+			x = x - 10;
+		}
+		if (z == 0)
+		{
+			w = w + 15;
+		}
+		if (z == 1)
+		{
+			w = w - 20;
+		}
+		if (x >= 500)
+			y = 1;
+		if (x <= 0)
+			y = 0;
+		if (w >= 500)
+			z = 1;
+		if (w <= 0)
+			z = 0;
+		InvalidateRect(hwnd, NULL, TRUE);
+		break;
+	case WM_LBUTTONDOWN:
+		//x = LOWORD(lParam);
+		//y = HIWORD(lParam);
+		fColor = RGB(0, 255, 255);
+		InvalidateRect(hwnd, NULL, TRUE);
+		break;
+	case WM_LBUTTONUP:
+		fColor = RGB(0, 0, 0);
+		InvalidateRect(hwnd, NULL, TRUE);
+		break;
+	case WM_RBUTTONDOWN:
+		fColor = RGB(255, 0, 255);
+		InvalidateRect(hwnd, NULL, TRUE);
+		break;
+	case WM_RBUTTONUP:
+		fColor = RGB(255, 0, 0);
+		InvalidateRect(hwnd, NULL, TRUE);
+		break;
+	case WM_CHAR:                    // 키보드
+		ch[cnt] = wParam;
+		ch[cnt + 1] = 0;
+		cnt++;
+		//MessageBox(hwnd, ch, "M_CHAR", MB_OK);
+		InvalidateRect(hwnd, NULL, TRUE);// 메시지가 생긴다.(WM_PAINT)
+		break;
+	case WM_PAINT:                   //화면에 보이는 부분
+		hdc = BeginPaint(hwnd, &ps);
+		SetTextColor(hdc, fColor);
+		TextOut(hdc, x, w, "H", 1);   // ,x ,y 좌표(픽셀), 이러한 글자, 글자수
+		EndPaint(hwnd, &ps);
+		break;
+	case WM_DESTROY:                  //프로그램이 끝날때 무조건 한번 실행된다. (자원의 반환을 한다.)
+		PostQuitMessage(0);
+		break;
+	}
+	return DefWindowProc(hwnd, iMsg, wParam, lParam);
+}
